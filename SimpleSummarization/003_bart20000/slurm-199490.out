@@ -1,0 +1,4 @@
+Traceback (most recent call last):
+  File "./run_summarization.py", line 34, in <module>
+    from transformers import (
+ImportError: cannot import name 'AutoModelForConditionalGeneration' from 'transformers' (/home/hj48/anaconda3/lib/python3.7/site-packages/transformers/__init__.py)
