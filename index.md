@@ -14,7 +14,8 @@ ___
 
 ### Project Materials
 
-[Project Repo](https://github.com/haramkoo/InterviewAI)
+- [Proposal](https://docs.google.com/document/d/1jYFH2y0SFvw5K9eVFQRNMO-UazR5w9YKnHaMpmKdFhk/edit?usp=sharing)
+- [Project Repo](https://github.com/haramkoo/InterviewAI)
 
 <!-- Add link to status report presentation -->
 <!-- Add link to final presentation -->
