@@ -12,11 +12,30 @@ This is a research project; the focus is less on developing new software and mor
 
 ___
 
+### The Team
+
+#### Hyechan Jun
+
+Hyechan Jun is a Senior Computer Science (BCS) major with a double major in Writing. He plans to continue studying AI into graduate school, with the goal of obtaining a Ph.D.
+
+#### Ha-Ram Koo
+
+Ha-Ram Koo is a Senior Computer Science (BCS) major with a minor in Spanish. He is in charge of data collection and data wrangling procedures for this project.
+
+#### Advait Scaria
+
+Advait Scaria is a Senior Computer Science (BCS) major with a minor in Data Science. He is the main analyst and judge of the models' performance.
+___
+
 ### Project Materials
 
 - [Proposal](https://docs.google.com/document/d/1jYFH2y0SFvw5K9eVFQRNMO-UazR5w9YKnHaMpmKdFhk/edit?usp=sharing)
 - [Project Repo](https://github.com/haramkoo/InterviewAI)
-- [Draft of Research Paper](https://drive.google.com/file/d/1EA47j6wK0wlfYVeGkYbyf2ieRpXC3NRE/view?usp=sharing)
+- [Draft of Research Paper/Report](https://drive.google.com/file/d/1EA47j6wK0wlfYVeGkYbyf2ieRpXC3NRE/view?usp=sharing)
 - [Status Report Presentation](https://docs.google.com/presentation/d/1yWd4C6-0VyIv4WeSGReReajeSNEWJ7VndQVG7goXSJk/edit?usp=sharing)
 
 <!-- Add link to final presentation -->
+
+### Other Links
+
+- [Calvin Computer Science Department](https://computing.calvin.edu/)
