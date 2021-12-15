@@ -1,8 +1,8 @@
-## AI Interviewer
+## DAISI (Deep Artificial Intelligence System for Interviews)
 
 ### About
 
-With the advent of machine learning, it has become increasingly clear that AI is capable of completing tasks that were hitherto considered only possible by human minds. We are now pushing the boundaries of what AI can do with natural language processing (NLP), from summarizing pages of text to keeping up a conversation with a human. Our project aims to join those on the frontier of machine learning by creating an AI Interviewer. There are two main problems to address here: first, whether creating such an interviewer will be possible, and second, whether it will be any good.
+With the advent of machine learning, it has become increasingly clear that AI is capable of completing tasks that were hitherto considered only possible by human minds. We hope to join those on the frontier of machine learning by creating an AI Interviewer, temporarily named DAISI. There are two main problems to address here: first, whether creating such an interviewer will be possible, and second, whether it will be any good. We have managed thus far to create prototype models that are capable of asking questions, and we have created qualitative metrics to score the models' performance. We have also created some quantitative metrics based on those qualitative metrics, and hope to expand our quantitative metrics further with more research. Our next step as of the writing of this About section is to iteratively create more models that will hopefully perform better than our current prototypes.
 
 ___
 
@@ -16,7 +16,7 @@ ___
 
 - [Proposal](https://docs.google.com/document/d/1jYFH2y0SFvw5K9eVFQRNMO-UazR5w9YKnHaMpmKdFhk/edit?usp=sharing)
 - [Project Repo](https://github.com/haramkoo/InterviewAI)
+- [Draft of Research Paper](https://drive.google.com/file/d/1EA47j6wK0wlfYVeGkYbyf2ieRpXC3NRE/view?usp=sharing)
+- [Status Report Presentation](https://docs.google.com/presentation/d/1yWd4C6-0VyIv4WeSGReReajeSNEWJ7VndQVG7goXSJk/edit?usp=sharing)
 
-<!-- Add link to status report presentation -->
 <!-- Add link to final presentation -->
-<!-- Add link to final project report -->
