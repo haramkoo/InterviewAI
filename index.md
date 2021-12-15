@@ -25,6 +25,7 @@ Ha-Ram Koo is a Senior Computer Science (BCS) major with a minor in Spanish. He 
 #### Advait Scaria
 
 Advait Scaria is a Senior Computer Science (BCS) major with a minor in Data Science. He is the main analyst and judge of the models' performance.
+
 ___
 
 ### Project Materials
