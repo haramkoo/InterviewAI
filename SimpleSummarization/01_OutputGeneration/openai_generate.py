@@ -1,7 +1,7 @@
 import os
 import openai
 
-with open('test.txt', 'r') as f:
+with open('data/test.txt', 'r') as f:
     data = [obj for obj in f]
 
 for i in data:

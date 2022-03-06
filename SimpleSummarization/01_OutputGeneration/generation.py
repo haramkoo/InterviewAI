@@ -3,8 +3,8 @@ from transformers import BartTokenizer, BartForConditionalGeneration
 
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 
-tokenizer = BartTokenizer.from_pretrained("../03_bart20000/output")
-model = BartForConditionalGeneration.from_pretrained("../03_bart20000/output")
+tokenizer = BartTokenizer.from_pretrained("../03_bart20000/model/output")
+model = BartForConditionalGeneration.from_pretrained("../03_bart20000/model/output")
 
 with open('test.txt', 'r') as f:
     data = [obj for obj in f]
