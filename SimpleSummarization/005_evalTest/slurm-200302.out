@@ -1,433 +1,0 @@
-10/19/2021 22:28:48 - WARNING - __main__ - Process rank: -1, device: cuda:0, n_gpu: 1distributed training: False, 16-bits training: False
-10/19/2021 22:28:48 - INFO - __main__ - Training/evaluation parameters Seq2SeqTrainingArguments(
-_n_gpu=1,
-adafactor=False,
-adam_beta1=0.9,
-adam_beta2=0.999,
-adam_epsilon=1e-08,
-dataloader_drop_last=False,
-dataloader_num_workers=0,
-dataloader_pin_memory=True,
-ddp_find_unused_parameters=None,
-debug=[],
-deepspeed=None,
-disable_tqdm=False,
-do_eval=True,
-do_predict=False,
-do_train=True,
-eval_accumulation_steps=None,
-eval_steps=500,
-evaluation_strategy=IntervalStrategy.NO,
-fp16=False,
-fp16_backend=auto,
-fp16_full_eval=False,
-fp16_opt_level=O1,
-generation_max_length=None,
-generation_num_beams=None,
-gradient_accumulation_steps=1,
-greater_is_better=None,
-group_by_length=False,
-hub_model_id=None,
-hub_strategy=HubStrategy.EVERY_SAVE,
-hub_token=None,
-ignore_data_skip=False,
-label_names=None,
-label_smoothing_factor=0.0,
-learning_rate=5e-05,
-length_column_name=length,
-load_best_model_at_end=False,
-local_rank=-1,
-log_level=-1,
-log_level_replica=-1,
-log_on_each_node=True,
-logging_dir=./evalTest2/runs/Oct19_22-28-48_borg-gpu.calvin.edu,
-logging_first_step=False,
-logging_nan_inf_filter=True,
-logging_steps=500,
-logging_strategy=IntervalStrategy.STEPS,
-lr_scheduler_type=SchedulerType.LINEAR,
-max_grad_norm=1.0,
-max_steps=-1,
-metric_for_best_model=None,
-mp_parameters=,
-no_cuda=False,
-num_train_epochs=10.0,
-output_dir=./evalTest2,
-overwrite_output_dir=True,
-past_index=-1,
-per_device_eval_batch_size=4,
-per_device_train_batch_size=4,
-predict_with_generate=False,
-prediction_loss_only=False,
-push_to_hub=False,
-push_to_hub_model_id=None,
-push_to_hub_organization=None,
-push_to_hub_token=None,
-remove_unused_columns=True,
-report_to=['tensorboard', 'wandb'],
-resume_from_checkpoint=None,
-run_name=./evalTest2,
-save_on_each_node=False,
-save_steps=500,
-save_strategy=IntervalStrategy.STEPS,
-save_total_limit=None,
-seed=42,
-sharded_ddp=[],
-skip_memory_metrics=True,
-sortish_sampler=False,
-tpu_metrics_debug=False,
-tpu_num_cores=None,
-use_legacy_prediction_loop=False,
-warmup_ratio=0.0,
-warmup_steps=0,
-weight_decay=0.0,
-)
-10/19/2021 22:28:49 - WARNING - datasets.builder - Using custom data configuration default-a77a18c55f4bdf04
-10/19/2021 22:28:49 - INFO - datasets.builder - Overwrite dataset info from restored data version.
-10/19/2021 22:28:49 - INFO - datasets.info - Loading Dataset info from /home/hj48/.cache/huggingface/datasets/json/default-a77a18c55f4bdf04/0.0.0/d75ead8d5cfcbe67495df0f89bd262f0023257fbbbd94a730313295f3d756d50
-10/19/2021 22:28:49 - WARNING - datasets.builder - Reusing dataset json (/home/hj48/.cache/huggingface/datasets/json/default-a77a18c55f4bdf04/0.0.0/d75ead8d5cfcbe67495df0f89bd262f0023257fbbbd94a730313295f3d756d50)
-10/19/2021 22:28:49 - INFO - datasets.info - Loading Dataset info from /home/hj48/.cache/huggingface/datasets/json/default-a77a18c55f4bdf04/0.0.0/d75ead8d5cfcbe67495df0f89bd262f0023257fbbbd94a730313295f3d756d50
-  0%|          | 0/2 [00:00<?, ?it/s]100%|##########| 2/2 [00:00<00:00, 302.18it/s]
-[INFO|configuration_utils.py:574] 2021-10-19 22:28:49,599 >> loading configuration file https://huggingface.co/facebook/bart-base/resolve/main/config.json from cache at /home/hj48/.cache/huggingface/transformers/f5310d276a6d1648d00c32fadc8bf7b4607e0fbd5b404fc4a0045960aa2bdfdb.da0f3c0e2dc1c2fecc46738a1ebf4806f2fc36aae3d5c1947f21e063e7cab34b
-[INFO|configuration_utils.py:611] 2021-10-19 22:28:49,603 >> Model config BartConfig {
-  "_name_or_path": "bart-base",
-  "activation_dropout": 0.1,
-  "activation_function": "gelu",
-  "add_bias_logits": false,
-  "add_final_layer_norm": false,
-  "architectures": [
-    "BartModel"
-  ],
-  "attention_dropout": 0.1,
-  "bos_token_id": 0,
-  "classif_dropout": 0.1,
-  "classifier_dropout": 0.0,
-  "d_model": 768,
-  "decoder_attention_heads": 12,
-  "decoder_ffn_dim": 3072,
-  "decoder_layerdrop": 0.0,
-  "decoder_layers": 6,
-  "decoder_start_token_id": 2,
-  "dropout": 0.1,
-  "early_stopping": true,
-  "encoder_attention_heads": 12,
-  "encoder_ffn_dim": 3072,
-  "encoder_layerdrop": 0.0,
-  "encoder_layers": 6,
-  "eos_token_id": 2,
-  "forced_eos_token_id": 2,
-  "gradient_checkpointing": false,
-  "id2label": {
-    "0": "LABEL_0",
-    "1": "LABEL_1",
-    "2": "LABEL_2"
-  },
-  "init_std": 0.02,
-  "is_encoder_decoder": true,
-  "label2id": {
-    "LABEL_0": 0,
-    "LABEL_1": 1,
-    "LABEL_2": 2
-  },
-  "max_position_embeddings": 1024,
-  "model_type": "bart",
-  "no_repeat_ngram_size": 3,
-  "normalize_before": false,
-  "normalize_embedding": true,
-  "num_beams": 4,
-  "num_hidden_layers": 6,
-  "pad_token_id": 1,
-  "scale_embedding": false,
-  "task_specific_params": {
-    "summarization": {
-      "length_penalty": 1.0,
-      "max_length": 128,
-      "min_length": 12,
-      "num_beams": 4
-    },
-    "summarization_cnn": {
-      "length_penalty": 2.0,
-      "max_length": 142,
-      "min_length": 56,
-      "num_beams": 4
-    },
-    "summarization_xsum": {
-      "length_penalty": 1.0,
-      "max_length": 62,
-      "min_length": 11,
-      "num_beams": 6
-    }
-  },
-  "torch_dtype": "float32",
-  "transformers_version": "4.11.0.dev0",
-  "use_cache": true,
-  "vocab_size": 50265
-}
-
-[INFO|tokenization_auto.py:334] 2021-10-19 22:28:49,970 >> Could not locate the tokenizer configuration file, will try to use the model config instead.
-[INFO|configuration_utils.py:574] 2021-10-19 22:28:50,366 >> loading configuration file https://huggingface.co/facebook/bart-base/resolve/main/config.json from cache at /home/hj48/.cache/huggingface/transformers/f5310d276a6d1648d00c32fadc8bf7b4607e0fbd5b404fc4a0045960aa2bdfdb.da0f3c0e2dc1c2fecc46738a1ebf4806f2fc36aae3d5c1947f21e063e7cab34b
-[INFO|configuration_utils.py:611] 2021-10-19 22:28:50,368 >> Model config BartConfig {
-  "_name_or_path": "bart-base",
-  "activation_dropout": 0.1,
-  "activation_function": "gelu",
-  "add_bias_logits": false,
-  "add_final_layer_norm": false,
-  "architectures": [
-    "BartModel"
-  ],
-  "attention_dropout": 0.1,
-  "bos_token_id": 0,
-  "classif_dropout": 0.1,
-  "classifier_dropout": 0.0,
-  "d_model": 768,
-  "decoder_attention_heads": 12,
-  "decoder_ffn_dim": 3072,
-  "decoder_layerdrop": 0.0,
-  "decoder_layers": 6,
-  "decoder_start_token_id": 2,
-  "dropout": 0.1,
-  "early_stopping": true,
-  "encoder_attention_heads": 12,
-  "encoder_ffn_dim": 3072,
-  "encoder_layerdrop": 0.0,
-  "encoder_layers": 6,
-  "eos_token_id": 2,
-  "forced_eos_token_id": 2,
-  "gradient_checkpointing": false,
-  "id2label": {
-    "0": "LABEL_0",
-    "1": "LABEL_1",
-    "2": "LABEL_2"
-  },
-  "init_std": 0.02,
-  "is_encoder_decoder": true,
-  "label2id": {
-    "LABEL_0": 0,
-    "LABEL_1": 1,
-    "LABEL_2": 2
-  },
-  "max_position_embeddings": 1024,
-  "model_type": "bart",
-  "no_repeat_ngram_size": 3,
-  "normalize_before": false,
-  "normalize_embedding": true,
-  "num_beams": 4,
-  "num_hidden_layers": 6,
-  "pad_token_id": 1,
-  "scale_embedding": false,
-  "task_specific_params": {
-    "summarization": {
-      "length_penalty": 1.0,
-      "max_length": 128,
-      "min_length": 12,
-      "num_beams": 4
-    },
-    "summarization_cnn": {
-      "length_penalty": 2.0,
-      "max_length": 142,
-      "min_length": 56,
-      "num_beams": 4
-    },
-    "summarization_xsum": {
-      "length_penalty": 1.0,
-      "max_length": 62,
-      "min_length": 11,
-      "num_beams": 6
-    }
-  },
-  "torch_dtype": "float32",
-  "transformers_version": "4.11.0.dev0",
-  "use_cache": true,
-  "vocab_size": 50265
-}
-
-[INFO|tokenization_utils_base.py:1741] 2021-10-19 22:28:53,493 >> loading file https://huggingface.co/facebook/bart-base/resolve/main/vocab.json from cache at /home/hj48/.cache/huggingface/transformers/43978bdeaa326572886b44fcfed82f932f76571095ce31973e51c3da8ccade7f.d67d6b367eb24ab43b08ad55e014cf254076934f71d832bbab9ad35644a375ab
-[INFO|tokenization_utils_base.py:1741] 2021-10-19 22:28:53,494 >> loading file https://huggingface.co/facebook/bart-base/resolve/main/merges.txt from cache at /home/hj48/.cache/huggingface/transformers/3c167ed8af56e6605eeb794b63a79d65d85e6708c9b04408d41946337030f5cd.5d12962c5ee615a4c803841266e9c3be9a691a924f72d395d3a6c6c81157788b
-[INFO|tokenization_utils_base.py:1741] 2021-10-19 22:28:53,494 >> loading file https://huggingface.co/facebook/bart-base/resolve/main/tokenizer.json from cache at /home/hj48/.cache/huggingface/transformers/a878fcd69bba037c9b1b227f4213579ae43d0aaa9374e167bc6c5f41b1cfeb30.fc9576039592f026ad76a1c231b89aee8668488c671dfbe6616bab2ed298d730
-[INFO|tokenization_utils_base.py:1741] 2021-10-19 22:28:53,494 >> loading file https://huggingface.co/facebook/bart-base/resolve/main/added_tokens.json from cache at None
-[INFO|tokenization_utils_base.py:1741] 2021-10-19 22:28:53,494 >> loading file https://huggingface.co/facebook/bart-base/resolve/main/special_tokens_map.json from cache at None
-[INFO|tokenization_utils_base.py:1741] 2021-10-19 22:28:53,494 >> loading file https://huggingface.co/facebook/bart-base/resolve/main/tokenizer_config.json from cache at None
-[INFO|configuration_utils.py:574] 2021-10-19 22:28:53,933 >> loading configuration file https://huggingface.co/facebook/bart-base/resolve/main/config.json from cache at /home/hj48/.cache/huggingface/transformers/f5310d276a6d1648d00c32fadc8bf7b4607e0fbd5b404fc4a0045960aa2bdfdb.da0f3c0e2dc1c2fecc46738a1ebf4806f2fc36aae3d5c1947f21e063e7cab34b
-[INFO|configuration_utils.py:611] 2021-10-19 22:28:53,935 >> Model config BartConfig {
-  "_name_or_path": "bart-base",
-  "activation_dropout": 0.1,
-  "activation_function": "gelu",
-  "add_bias_logits": false,
-  "add_final_layer_norm": false,
-  "architectures": [
-    "BartModel"
-  ],
-  "attention_dropout": 0.1,
-  "bos_token_id": 0,
-  "classif_dropout": 0.1,
-  "classifier_dropout": 0.0,
-  "d_model": 768,
-  "decoder_attention_heads": 12,
-  "decoder_ffn_dim": 3072,
-  "decoder_layerdrop": 0.0,
-  "decoder_layers": 6,
-  "decoder_start_token_id": 2,
-  "dropout": 0.1,
-  "early_stopping": true,
-  "encoder_attention_heads": 12,
-  "encoder_ffn_dim": 3072,
-  "encoder_layerdrop": 0.0,
-  "encoder_layers": 6,
-  "eos_token_id": 2,
-  "forced_eos_token_id": 2,
-  "gradient_checkpointing": false,
-  "id2label": {
-    "0": "LABEL_0",
-    "1": "LABEL_1",
-    "2": "LABEL_2"
-  },
-  "init_std": 0.02,
-  "is_encoder_decoder": true,
-  "label2id": {
-    "LABEL_0": 0,
-    "LABEL_1": 1,
-    "LABEL_2": 2
-  },
-  "max_position_embeddings": 1024,
-  "model_type": "bart",
-  "no_repeat_ngram_size": 3,
-  "normalize_before": false,
-  "normalize_embedding": true,
-  "num_beams": 4,
-  "num_hidden_layers": 6,
-  "pad_token_id": 1,
-  "scale_embedding": false,
-  "task_specific_params": {
-    "summarization": {
-      "length_penalty": 1.0,
-      "max_length": 128,
-      "min_length": 12,
-      "num_beams": 4
-    },
-    "summarization_cnn": {
-      "length_penalty": 2.0,
-      "max_length": 142,
-      "min_length": 56,
-      "num_beams": 4
-    },
-    "summarization_xsum": {
-      "length_penalty": 1.0,
-      "max_length": 62,
-      "min_length": 11,
-      "num_beams": 6
-    }
-  },
-  "torch_dtype": "float32",
-  "transformers_version": "4.11.0.dev0",
-  "use_cache": true,
-  "vocab_size": 50265
-}
-
-[INFO|modeling_utils.py:1291] 2021-10-19 22:28:54,521 >> loading weights file https://huggingface.co/facebook/bart-base/resolve/main/pytorch_model.bin from cache at /home/hj48/.cache/huggingface/transformers/486355ec722ef05fd480e999d4c763be56549ae930f6a3742ee721a5d2a05647.f2f355ad2775769afc60592b43a46d72ca548375e3a1d65f381a751e711cbadd
-[INFO|modeling_utils.py:1547] 2021-10-19 22:28:56,142 >> All model checkpoint weights were used when initializing BartForConditionalGeneration.
-
-[INFO|modeling_utils.py:1556] 2021-10-19 22:28:56,143 >> All the weights of BartForConditionalGeneration were initialized from the model checkpoint at facebook/bart-base.
-If your task is similar to the task the model of the checkpoint was trained on, you can already use BartForConditionalGeneration for predictions without further training.
-10/19/2021 22:28:56 - WARNING - datasets.arrow_dataset - Loading cached processed dataset at /home/hj48/.cache/huggingface/datasets/json/default-a77a18c55f4bdf04/0.0.0/d75ead8d5cfcbe67495df0f89bd262f0023257fbbbd94a730313295f3d756d50/cache-f76fef25e3094fc5.arrow
-Running tokenizer on validation dataset:   0%|          | 0/1 [00:00<?, ?ba/s]10/19/2021 22:28:56 - INFO - datasets.arrow_dataset - Caching processed dataset at /home/hj48/.cache/huggingface/datasets/json/default-a77a18c55f4bdf04/0.0.0/d75ead8d5cfcbe67495df0f89bd262f0023257fbbbd94a730313295f3d756d50/cache-4c1723e4b3ddc25d.arrow
-Running tokenizer on validation dataset: 100%|##########| 1/1 [00:00<00:00, 36.26ba/s]10/19/2021 22:28:56 - INFO - datasets.load - Found main folder for metric https://raw.githubusercontent.com/huggingface/datasets/1.12.1/metrics/rouge/rouge.py at /home/hj48/.cache/huggingface/modules/datasets_modules/metrics/rouge
-10/19/2021 22:28:56 - INFO - datasets.load - Found specific version folder for metric https://raw.githubusercontent.com/huggingface/datasets/1.12.1/metrics/rouge/rouge.py at /home/hj48/.cache/huggingface/modules/datasets_modules/metrics/rouge/2b73d5eb463209373e9d21a95decb226d4164bdca4c361b8dfad295ec82bc62e
-10/19/2021 22:28:56 - INFO - datasets.load - Found script file from https://raw.githubusercontent.com/huggingface/datasets/1.12.1/metrics/rouge/rouge.py to /home/hj48/.cache/huggingface/modules/datasets_modules/metrics/rouge/2b73d5eb463209373e9d21a95decb226d4164bdca4c361b8dfad295ec82bc62e/rouge.py
-10/19/2021 22:28:56 - INFO - datasets.load - Couldn't find dataset infos file at https://raw.githubusercontent.com/huggingface/datasets/1.12.1/metrics/rouge/dataset_infos.json
-10/19/2021 22:28:56 - INFO - datasets.load - Found metadata file for metric https://raw.githubusercontent.com/huggingface/datasets/1.12.1/metrics/rouge/rouge.py at /home/hj48/.cache/huggingface/modules/datasets_modules/metrics/rouge/2b73d5eb463209373e9d21a95decb226d4164bdca4c361b8dfad295ec82bc62e/rouge.json
-huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
-To disable this warning, you can either:
-	- Avoid using `tokenizers` before the fork if possible
-	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
-huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
-To disable this warning, you can either:
-	- Avoid using `tokenizers` before the fork if possible
-	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
-huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
-To disable this warning, you can either:
-	- Avoid using `tokenizers` before the fork if possible
-	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
-
-[INFO|trainer.py:1186] 2021-10-19 22:29:00,936 >> ***** Running training *****
-[INFO|trainer.py:1187] 2021-10-19 22:29:00,936 >>   Num examples = 100
-[INFO|trainer.py:1188] 2021-10-19 22:29:00,936 >>   Num Epochs = 10
-[INFO|trainer.py:1189] 2021-10-19 22:29:00,936 >>   Instantaneous batch size per device = 4
-[INFO|trainer.py:1190] 2021-10-19 22:29:00,936 >>   Total train batch size (w. parallel, distributed & accumulation) = 4
-[INFO|trainer.py:1191] 2021-10-19 22:29:00,936 >>   Gradient Accumulation steps = 1
-[INFO|trainer.py:1192] 2021-10-19 22:29:00,936 >>   Total optimization steps = 250
-[INFO|integrations.py:448] 2021-10-19 22:29:00,954 >> Automatic Weights & Biases logging enabled, to disable set os.environ["WANDB_DISABLED"] = "true"
-huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
-To disable this warning, you can either:
-	- Avoid using `tokenizers` before the fork if possible
-	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
-wandb: Currently logged in as: hyechanjun (use `wandb login --relogin` to force relogin)
-huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
-To disable this warning, you can either:
-	- Avoid using `tokenizers` before the fork if possible
-	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
-huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
-To disable this warning, you can either:
-	- Avoid using `tokenizers` before the fork if possible
-	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
-huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
-To disable this warning, you can either:
-	- Avoid using `tokenizers` before the fork if possible
-	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
-wandb: Tracking run with wandb version 0.12.5
-wandb: Syncing run ./evalTest2
-wandb:  View project at https://wandb.ai/hyechanjun/huggingface
-wandb:  View run at https://wandb.ai/hyechanjun/huggingface/runs/rs7fg11v
-wandb: Run data is saved locally in /home/hj48/SeniorProject/SimpleSummarization/evalTest/wandb/run-20211019_222901-rs7fg11v
-wandb: Run `wandb offline` to turn off syncing.
-
-  0% 0/250 [00:00<?, ?it/s]  0% 1/250 [00:00<01:58,  2.10it/s]  1% 2/250 [00:00<01:05,  3.77it/s]  2% 4/250 [00:00<00:45,  5.39it/s]  2% 6/250 [00:01<00:37,  6.47it/s]  3% 7/250 [00:01<00:34,  7.07it/s]  4% 9/250 [00:01<00:27,  8.65it/s]  4% 11/250 [00:01<00:24,  9.79it/s]  5% 13/250 [00:01<00:22, 10.33it/s]  6% 15/250 [00:01<00:21, 10.76it/s]  7% 17/250 [00:02<00:20, 11.18it/s]  8% 19/250 [00:02<00:19, 11.56it/s]  8% 21/250 [00:02<00:19, 11.56it/s]  9% 23/250 [00:02<00:19, 11.66it/s] 10% 25/250 [00:02<00:22,  9.95it/s] 11% 27/250 [00:02<00:20, 10.72it/s] 12% 29/250 [00:03<00:23,  9.47it/s] 12% 31/250 [00:03<00:21, 10.26it/s] 13% 33/250 [00:03<00:19, 11.05it/s] 14% 35/250 [00:03<00:19, 11.26it/s] 15% 37/250 [00:03<00:18, 11.26it/s] 16% 39/250 [00:04<00:17, 11.92it/s] 16% 41/250 [00:04<00:17, 11.99it/s] 17% 43/250 [00:04<00:17, 11.86it/s] 18% 45/250 [00:04<00:17, 12.04it/s] 19% 47/250 [00:04<00:16, 12.00it/s] 20% 49/250 [00:04<00:16, 11.99it/s] 20% 51/250 [00:05<00:17, 11.64it/s] 21% 53/250 [00:05<00:16, 11.74it/s] 22% 55/250 [00:05<00:16, 11.68it/s] 23% 57/250 [00:05<00:16, 11.91it/s] 24% 59/250 [00:05<00:15, 12.30it/s] 24% 61/250 [00:05<00:15, 12.21it/s] 25% 63/250 [00:06<00:16, 11.13it/s] 26% 65/250 [00:06<00:16, 11.40it/s] 27% 67/250 [00:06<00:15, 11.49it/s] 28% 69/250 [00:06<00:17, 10.55it/s] 28% 71/250 [00:06<00:16, 10.81it/s] 29% 73/250 [00:06<00:15, 11.11it/s] 30% 75/250 [00:07<00:15, 11.25it/s] 31% 77/250 [00:07<00:14, 11.76it/s] 32% 79/250 [00:07<00:14, 11.84it/s] 32% 81/250 [00:07<00:13, 12.08it/s] 33% 83/250 [00:07<00:13, 11.97it/s] 34% 85/250 [00:07<00:14, 11.73it/s] 35% 87/250 [00:08<00:13, 11.77it/s] 36% 89/250 [00:08<00:13, 11.93it/s] 36% 91/250 [00:08<00:14, 10.70it/s] 37% 93/250 [00:08<00:15, 10.14it/s] 38% 95/250 [00:08<00:14, 10.51it/s] 39% 97/250 [00:09<00:15, 10.16it/s] 40% 99/250 [00:09<00:14, 10.67it/s] 40% 101/250 [00:09<00:13, 11.34it/s] 41% 103/250 [00:09<00:12, 11.57it/s] 42% 105/250 [00:09<00:12, 11.57it/s] 43% 107/250 [00:09<00:12, 11.66it/s] 44% 109/250 [00:10<00:11, 11.83it/s] 44% 111/250 [00:10<00:11, 11.73it/s] 45% 113/250 [00:10<00:12, 11.20it/s] 46% 115/250 [00:10<00:11, 11.25it/s] 47% 117/250 [00:10<00:12, 10.91it/s] 48% 119/250 [00:11<00:12, 10.85it/s] 48% 121/250 [00:11<00:11, 11.20it/s] 49% 123/250 [00:11<00:11, 11.38it/s] 50% 125/250 [00:11<00:11, 10.71it/s] 51% 127/250 [00:11<00:12, 10.14it/s] 52% 129/250 [00:12<00:11, 10.32it/s] 52% 131/250 [00:12<00:11, 10.66it/s] 53% 133/250 [00:12<00:10, 11.19it/s] 54% 135/250 [00:12<00:09, 11.62it/s] 55% 137/250 [00:12<00:10, 10.99it/s] 56% 139/250 [00:12<00:09, 11.34it/s] 56% 141/250 [00:13<00:09, 11.56it/s] 57% 143/250 [00:13<00:09, 11.82it/s] 58% 145/250 [00:13<00:08, 12.16it/s] 59% 147/250 [00:13<00:08, 11.86it/s] 60% 149/250 [00:13<00:08, 11.89it/s] 60% 151/250 [00:13<00:09, 10.75it/s] 61% 153/250 [00:14<00:08, 11.38it/s] 62% 155/250 [00:14<00:08, 11.67it/s] 63% 157/250 [00:14<00:07, 11.72it/s] 64% 159/250 [00:14<00:08, 11.07it/s] 64% 161/250 [00:14<00:08, 11.04it/s] 65% 163/250 [00:14<00:07, 11.59it/s] 66% 165/250 [00:15<00:07, 11.57it/s] 67% 167/250 [00:15<00:06, 11.93it/s] 68% 169/250 [00:15<00:07, 11.13it/s] 68% 171/250 [00:15<00:07, 11.07it/s] 69% 173/250 [00:15<00:07, 10.55it/s] 70% 175/250 [00:16<00:07, 10.59it/s] 71% 177/250 [00:16<00:06, 11.07it/s] 72% 179/250 [00:16<00:06, 10.39it/s] 72% 181/250 [00:16<00:06, 10.69it/s] 73% 183/250 [00:16<00:05, 11.38it/s] 74% 185/250 [00:16<00:05, 11.62it/s] 75% 187/250 [00:17<00:06, 10.36it/s] 76% 189/250 [00:17<00:05, 10.60it/s] 76% 191/250 [00:17<00:05, 11.24it/s] 77% 193/250 [00:17<00:05, 11.26it/s] 78% 195/250 [00:17<00:04, 11.46it/s] 79% 197/250 [00:18<00:04, 11.47it/s] 80% 199/250 [00:18<00:04, 11.87it/s] 80% 201/250 [00:18<00:03, 12.53it/s] 81% 203/250 [00:18<00:03, 12.50it/s] 82% 205/250 [00:18<00:03, 12.57it/s] 83% 207/250 [00:18<00:03, 12.98it/s] 84% 209/250 [00:18<00:03, 12.37it/s] 84% 211/250 [00:19<00:03, 11.84it/s] 85% 213/250 [00:19<00:03, 10.93it/s] 86% 215/250 [00:19<00:03, 11.06it/s] 87% 217/250 [00:19<00:02, 11.33it/s] 88% 219/250 [00:19<00:02, 10.98it/s] 88% 221/250 [00:20<00:02, 11.14it/s] 89% 223/250 [00:20<00:02, 11.50it/s] 90% 225/250 [00:20<00:02, 11.30it/s] 91% 227/250 [00:20<00:02, 10.43it/s] 92% 229/250 [00:20<00:02, 10.05it/s] 92% 231/250 [00:21<00:01,  9.83it/s] 93% 232/250 [00:21<00:01,  9.84it/s] 94% 234/250 [00:21<00:01, 10.64it/s] 94% 236/250 [00:21<00:01, 10.63it/s] 95% 238/250 [00:21<00:01, 11.08it/s] 96% 240/250 [00:21<00:00, 11.58it/s] 97% 242/250 [00:21<00:00, 12.09it/s] 98% 244/250 [00:22<00:00, 12.33it/s] 98% 246/250 [00:22<00:00, 11.92it/s] 99% 248/250 [00:22<00:00, 12.23it/s]100% 250/250 [00:22<00:00, 12.51it/s][INFO|trainer.py:1391] 2021-10-19 22:29:29,990 >> 
-
-Training completed. Do not forget to share your model on huggingface.co/models =)
-
-
-                                     100% 250/250 [00:22<00:00, 12.51it/s]100% 250/250 [00:22<00:00, 11.04it/s]
-[INFO|trainer.py:1963] 2021-10-19 22:29:29,996 >> Saving model checkpoint to ./evalTest2
-[INFO|configuration_utils.py:404] 2021-10-19 22:29:29,998 >> Configuration saved in ./evalTest2/config.json
-[INFO|modeling_utils.py:1013] 2021-10-19 22:29:31,479 >> Model weights saved in ./evalTest2/pytorch_model.bin
-[INFO|tokenization_utils_base.py:2033] 2021-10-19 22:29:31,481 >> tokenizer config file saved in ./evalTest2/tokenizer_config.json
-[INFO|tokenization_utils_base.py:2039] 2021-10-19 22:29:31,482 >> Special tokens file saved in ./evalTest2/special_tokens_map.json
-{'train_runtime': 29.0549, 'train_samples_per_second': 34.418, 'train_steps_per_second': 8.604, 'train_loss': 1.865956787109375, 'epoch': 10.0}
-***** train metrics *****
-  epoch                    =       10.0
-  train_loss               =      1.866
-  train_runtime            = 0:00:29.05
-  train_samples            =        100
-  train_samples_per_second =     34.418
-  train_steps_per_second   =      8.604
-10/19/2021 22:29:31 - INFO - __main__ - *** Evaluate ***
-[INFO|trainer.py:2209] 2021-10-19 22:29:31,590 >> ***** Running Evaluation *****
-[INFO|trainer.py:2211] 2021-10-19 22:29:31,590 >>   Num examples = 50
-[INFO|trainer.py:2214] 2021-10-19 22:29:31,590 >>   Batch size = 4
-  0% 0/13 [00:00<?, ?it/s] 54% 7/13 [00:00<00:00, 58.31it/s]100% 13/13 [00:00<00:00, 49.26it/s]100% 13/13 [00:00<00:00, 49.14it/s]
-***** eval metrics *****
-  epoch                   =       10.0
-  eval_loss               =     3.8656
-  eval_runtime            = 0:00:00.27
-  eval_samples            =         50
-  eval_samples_per_second =    183.917
-  eval_steps_per_second   =     47.818
-wandb: Waiting for W&B process to finish, PID 92865... (success).
-wandb: - 0.00MB of 0.00MB uploaded (0.00MB deduped)wandb: \ 0.00MB of 0.00MB uploaded (0.00MB deduped)wandb: | 0.00MB of 0.03MB uploaded (0.00MB deduped)wandb: / 0.00MB of 0.03MB uploaded (0.00MB deduped)wandb: - 0.00MB of 0.03MB uploaded (0.00MB deduped)wandb: \ 0.00MB of 0.03MB uploaded (0.00MB deduped)wandb: | 0.00MB of 0.03MB uploaded (0.00MB deduped)wandb: / 0.00MB of 0.03MB uploaded (0.00MB deduped)wandb: - 0.03MB of 0.03MB uploaded (0.00MB deduped)wandb: \ 0.03MB of 0.03MB uploaded (0.00MB deduped)wandb: | 0.03MB of 0.03MB uploaded (0.00MB deduped)wandb: / 0.03MB of 0.03MB uploaded (0.00MB deduped)wandb: - 0.03MB of 0.03MB uploaded (0.00MB deduped)wandb: \ 0.03MB of 0.03MB uploaded (0.00MB deduped)wandb: | 0.03MB of 0.03MB uploaded (0.00MB deduped)wandb:                                                                                
-wandb: Run summary:
-wandb:                        eval/loss 3.86564
-wandb:                     eval/runtime 0.2719
-wandb:          eval/samples_per_second 183.917
-wandb:            eval/steps_per_second 47.818
-wandb:                      train/epoch 10.0
-wandb:                train/global_step 250
-wandb:                 train/total_flos 136095082905600.0
-wandb:                 train/train_loss 1.86596
-wandb:              train/train_runtime 29.0549
-wandb:   train/train_samples_per_second 34.418
-wandb:     train/train_steps_per_second 8.604
-wandb: 
-wandb: Synced 6 W&B file(s), 0 media file(s), 0 artifact file(s) and 0 other file(s)
-wandb: Synced ./evalTest2: https://wandb.ai/hyechanjun/huggingface/runs/rs7fg11v
-wandb: Find logs at: ./wandb/run-20211019_222901-rs7fg11v/logs/debug.log
-wandb: 
-
