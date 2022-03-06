@@ -14,10 +14,10 @@
 # Run the program
 python ./run_summarization.py \
 	--model_name_or_path facebook/bart-base \
-	--output_dir ./evalTest5 \
+	--output_dir ./model/evalTest5 \
 	--overwrite_output_dir TRUE \
-	--train_file ./transformers_train_small.json \
-	--validation_file ./transformers_validation_small.json \
+	--train_file ./data/transformers_train_small.json \
+	--validation_file ./data/transformers_validation_small.json \
 	--do_train TRUE \
 	--do_eval TRUE \
 	--per_device_train_batch_size 4 \

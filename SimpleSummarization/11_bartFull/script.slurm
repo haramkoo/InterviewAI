@@ -14,10 +14,10 @@
 # Run the program
 python ./run_summarization.py \
 	--model_name_or_path facebook/bart-base \
-	--output_dir ./bart-full-utterances \
+	--output_dir ./model/bart-full-utterances \
 	--overwrite_output_dir TRUE \
-	--train_file ./full-train.json \
-	--validation_file ./full-eval.json \
+	--train_file ./data/full-train.json \
+	--validation_file ./data/full-eval.json \
 	--do_train TRUE \
 	--do_eval TRUE \
 	--per_device_train_batch_size 4 \

@@ -3,13 +3,13 @@ from transformers import BartTokenizer, BartForConditionalGeneration
 
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 
-tokenizer = BartTokenizer.from_pretrained("../04_bartBlankPrompt/bart-blank")
-model = BartForConditionalGeneration.from_pretrained("../04_bartBlankPrompt/bart-blank")
+tokenizer = BartTokenizer.from_pretrained("../04_bartBlankPrompt/model/bart-blank")
+model = BartForConditionalGeneration.from_pretrained("../04_bartBlankPrompt/model/bart-blank")
 
-with open('test.txt', 'r') as f:
+with open('data/test.txt', 'r') as f:
     data = [line for line in f]
 
-with open('completions.txt', 'r') as f2:
+with open('data/completions.txt', 'r') as f2:
     completions = [line for line in f2]
 
 for i in range(100):

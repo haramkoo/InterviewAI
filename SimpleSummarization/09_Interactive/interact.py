@@ -3,8 +3,8 @@ from transformers import BartTokenizer, BartForConditionalGeneration
 
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 
-tokenizer = BartTokenizer.from_pretrained("../002_bart/bart-interview")
-model = BartForConditionalGeneration.from_pretrained("../002_bart/bart-interview")
+tokenizer = BartTokenizer.from_pretrained("../02_bart/model/bart-interview")
+model = BartForConditionalGeneration.from_pretrained("../02_bart/model/bart-interview")
 
 print('\nWelcome to the BART Interactive Interview AI!')
 print('Tell us an interesting story, or type \'END\' to stop.')

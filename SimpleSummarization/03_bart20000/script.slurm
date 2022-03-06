@@ -12,4 +12,11 @@
 #SBATCH -p gpus
 #
 # Run the program
-python ./run_summarization.py --model_name_or_path facebook/bart-base --output_dir ./output --overwrite_output_dir TRUE --train_file ./transformers_output.json --do_train TRUE --logging_dir ./log --per_device_train_batch_size 4
+python ./run_summarization.py \
+	--model_name_or_path facebook/bart-base \
+	--output_dir ./model/output \
+	--overwrite_output_dir TRUE \
+	--train_file ./data/transformers_output.json \
+	--do_train TRUE \
+	--logging_dir ./log \
+	--per_device_train_batch_size 4

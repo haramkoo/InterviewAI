@@ -14,10 +14,10 @@
 # Run the program
 python ./run_summarization.py \
 	--model_name_or_path facebook/bart-base \
-	--output_dir ./bart-length-tagged \
+	--output_dir ./model/bart-length-tagged \
 	--overwrite_output_dir TRUE \
-	--train_file ./num-tag-dataset.json \
-	--validation_file ./tag_data_validate.json \
+	--train_file ./data/num-tag-dataset.json \
+	--validation_file ./data/tag_data_validate.json \
 	--do_train TRUE \
 	--do_eval TRUE \
 	--per_device_train_batch_size 4 \
