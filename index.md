@@ -32,7 +32,7 @@ ___
 
 - [Proposal](https://docs.google.com/document/d/1jYFH2y0SFvw5K9eVFQRNMO-UazR5w9YKnHaMpmKdFhk/edit?usp=sharing)
 - [Project Repo](https://github.com/haramkoo/InterviewAI)
-- [Draft of Research Paper/Report](https://drive.google.com/file/d/1EA47j6wK0wlfYVeGkYbyf2ieRpXC3NRE/view?usp=sharing)
+- [Research Paper/Report](https://drive.google.com/file/d/1tUyPhk9ePAeYYJh_T6nqyXttOsvmFExE/view?usp=sharing)
 - [Status Report Presentation](https://docs.google.com/presentation/d/1yWd4C6-0VyIv4WeSGReReajeSNEWJ7VndQVG7goXSJk/edit?usp=sharing)
 
 <!-- Add link to final presentation -->
